@@ -1,0 +1,10 @@
+# Use nginx as base image
+FROM nginx:alpine
+
+# Copy all project files to nginx web root
+COPY . /usr/share/nginx/html/
+
+# Expose port 80
+EXPOSE 80
+
+# Nginx will start automatically, no need for CMD
